@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acid Beats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ACID PLAYER</h1>
+            <button id="addBtn" class="btn">+</button>
+        </header>
+
+        <div id="addForm" class="hidden">
+            <input type="text" id="songTitle" placeholder="Название трека">
+            <input type="text" id="songArtist" placeholder="Автор">
+            <label>Файл музыки:</label>
+            <input type="file" id="songFile" accept="audio/*">
+            <label>Обложка:</label>
+            <input type="file" id="coverFile" accept="image/*">
+            <button id="saveBtn" class="btn">Добавить в плейлист</button>
+        </div>
+
+        <div class="player">
+            <div class="cover-wrapper">
+                <img id="coverImage" src="https://via.placeholder.com/200/9d00ff/bfff00?text=NO+COVER" alt="Обложка">
+            </div>
+            <h2 id="currentTitle">Выбери трек</h2>
+            <h3 id="currentArtist">...</h3>
+            
+            <audio id="audioPlayer" controls></audio>
+            
+            <div class="controls">
+                <button id="loopBtn" class="btn">Повтор: ВЫКЛ</button>
+            </div>
+            
+            <div id="lyrics" class="lyrics">
+                Здесь будут субтитры...
+            </div>
+        </div>
+
+        <h2>Моя музыка</h2>
+        <ul id="playlist"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
